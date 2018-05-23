@@ -4,9 +4,9 @@ import com.yy.ch3.pojo.Role;
 import java.util.List;
 
 public interface RoleMapper {
-    int insertRole(Role role);
-    int deleteRole(Long id);
-    int updateRole(Role role);
-    int getRole(Long id);
-    List<Role> findRoles(String roleName);
+    public int insertRole(Role role);
+    public int deleteRole(Long id);
+    public int updateRole(Role role);
+    public Role getRole(Long id);
+    public List<Role> findRoles(String roleName);
 }

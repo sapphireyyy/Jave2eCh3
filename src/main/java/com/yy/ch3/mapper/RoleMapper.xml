@@ -14,11 +14,11 @@
         UPDATE t_role SET role_name = #{roleName}, note = #{note} WHERE id = #{id}
     </update>
 
-    <select id="getRole" parameterType="long" resultMap="role">
+    <select id="getRole" parameterType="long" resultType="role">
         SELECT id, role_name AS roleName, note FROM t_role WHERE id = #{id}
     </select>
 
-    <select id="findRoles" parameterType="string" resultMap="role">
+    <select id="findRoles" parameterType="string" resultType="role">
         SELECT id, role_name AS rolename, note FROM t_role WHERE role_name LIKE  concat('%', #{roleName}, '%')
     </select>
 </mapper>
